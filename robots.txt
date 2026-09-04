@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://atharvakumbhar1007.github.io/Atharva-Portfolio/sitemap.xml

@@ -1,5 +1,7 @@
 # Atharva Vinayak Kumbhar — Portfolio
 
+🌐 **Live Website**: [https://atharvakumbhar1007.github.io/Atharva-Portfolio/](https://atharvakumbhar1007.github.io/Atharva-Portfolio/)
+
 ![Atharva Vinayak Kumbhar Portfolio Preview](portfolio_assets/og-preview.jpg)
 
 ## About
@@ -59,9 +61,14 @@ The portfolio website itself is built with:
 
 ---
 
-## Environment Variables (Deployment)
+## Deployment
 
-For form submission delivery via Resend when deployed on Vercel:
+### GitHub Pages (Static Hosting)
+This portfolio is configured for automated continuous deployment via **GitHub Actions** (`.github/workflows/deploy.yml`). On every push to the `main` branch, the workflow packages the static website and publishes it directly to:
+👉 **[https://atharvakumbhar1007.github.io/Atharva-Portfolio/](https://atharvakumbhar1007.github.io/Atharva-Portfolio/)**
+
+### Vercel (Optional Full-Stack with Serverless Email)
+If deploying to Vercel with active `/api/submit` form delivery via Resend:
 
 | Variable | Description |
 | :--- | :--- |

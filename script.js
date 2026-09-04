@@ -249,6 +249,36 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.opacity = '0.7';
             btn.style.pointerEvents = 'none';
 
+            // Static hosting fallback (GitHub Pages does not run Vercel serverless /api/submit)
+            if (window.location.hostname.endsWith('github.io')) {
+                const subject = encodeURIComponent(`Portfolio Message from ${name}`);
+                const body = encodeURIComponent(`${message}\n\n---\nSender: ${name}\nEmail: ${email}`);
+                const mailtoLink = `mailto:atharvakumbhar631@gmail.com?subject=${subject}&body=${body}`;
+
+                window.location.href = mailtoLink;
+
+                btn.innerHTML = '<span>Opening Mail Client...</span> <i class="fa-solid fa-envelope"></i>';
+                btn.style.background = 'linear-gradient(90deg, #22c55e, #16a34a, #22c55e)';
+                btn.style.borderColor = '#4ade80';
+
+                if (formFeedback) {
+                    formFeedback.textContent = 'Opening your email client to send directly to atharvakumbhar631@gmail.com!';
+                    formFeedback.className = 'form-feedback success';
+                }
+
+                contactForm.reset();
+                if (window.soundSystem) window.soundSystem.playSuccess();
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.style.borderColor = '';
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'all';
+                }, 3500);
+                return;
+            }
+
             const payload = JSON.stringify({ name, email, message });
 
             fetch('/api/submit', {
@@ -281,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.innerHTML = '<span>Error, Please Retry!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
                         btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
                         if (formFeedback) {
-                            formFeedback.textContent = resData.message || 'Something went wrong. Please try again or email atharvakumbhar631@gmail.com directly.';
+                            formFeedback.innerHTML = (resData.message || 'Something went wrong.') + ' Please reach out directly at <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">atharvakumbhar631@gmail.com</a>.';
                             formFeedback.className = 'form-feedback error';
                         }
                         if (window.soundSystem) window.soundSystem.playError();
@@ -291,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.innerHTML = '<span>Error!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
                     btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
                     if (formFeedback) {
-                        formFeedback.textContent = 'Network error. Please try again or reach out directly at atharvakumbhar631@gmail.com.';
+                        formFeedback.innerHTML = 'Network / static hosting error. Please email <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">atharvakumbhar631@gmail.com</a> directly.';
                         formFeedback.className = 'form-feedback error';
                     }
                     if (window.soundSystem) window.soundSystem.playError();
