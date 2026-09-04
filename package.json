@@ -1,0 +1,36 @@
+{
+  "name": "atharva-portfolio",
+  "version": "1.0.0",
+  "description": "Atharva Vinayak Kumbhar - Full Stack Developer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "dev": "python -m http.server 3000",
+    "serve": "npx http-server -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atharvakumbhar1007/Atharva-Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Atharvakumbhar1007/Atharva-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Atharvakumbhar1007/Atharva-Portfolio#readme",
+  "keywords": [
+    "portfolio",
+    "full-stack-developer",
+    "react",
+    "nodejs",
+    "typescript",
+    "python",
+    "ai",
+    "agentic-ai",
+    "threejs"
+  ],
+  "author": "Atharva Vinayak Kumbhar <atharvakumbhar631@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}

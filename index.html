@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Vinayak Kumbhar | Full Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Atharva Vinayak Kumbhar, a Full Stack Developer building modern web applications, REST APIs, database systems, and AI-powered solutions.">
+    <meta name="author" content="Atharva Vinayak Kumbhar">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Atharva Vinayak Kumbhar | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer building scalable web applications, robust APIs, database systems, and AI-powered solutions.">
+    <meta property="og:image" content="portfolio_assets/og-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Atharva Vinayak Kumbhar | Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Developer building scalable web applications, robust APIs, database systems, and AI-powered solutions.">
+    <meta name="twitter:image" content="portfolio_assets/og-preview.jpg">
+
+    <link rel="icon" href="portfolio_assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+    <!-- ── Floating Navbar ── -->
+    <nav class="site-nav" id="siteNav" aria-label="Main Navigation">
+        <div class="nav-pill">
+            <span class="nav-indicator" id="navIndicator"></span>
+            <a href="#home" class="nav-link active" data-section="home">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="#about" class="nav-link" data-section="about">
+                <i class="fa-solid fa-user nav-icon"></i>
+                <span class="nav-label">About</span>
+            </a>
+            <a href="#education" class="nav-link" data-section="education">
+                <i class="fa-solid fa-graduation-cap nav-icon"></i>
+                <span class="nav-label">Education</span>
+            </a>
+            <a href="#projects" class="nav-link" data-section="projects">
+                <i class="fa-solid fa-code nav-icon"></i>
+                <span class="nav-label">Projects</span>
+            </a>
+            <a href="#skills" class="nav-link" data-section="skills">
+                <i class="fa-solid fa-layer-group nav-icon"></i>
+                <span class="nav-label">Skills</span>
+            </a>
+            <a href="#certifications" class="nav-link" data-section="certifications">
+                <i class="fa-solid fa-award nav-icon"></i>
+                <span class="nav-label">Certs</span>
+            </a>
+            <a href="#profiles" class="nav-link" data-section="profiles">
+                <i class="fa-solid fa-globe nav-icon"></i>
+                <span class="nav-label">Profiles</span>
+            </a>
+            <a href="#contact" class="nav-link" data-section="contact">
+                <i class="fa-solid fa-envelope nav-icon"></i>
+                <span class="nav-label">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ── Preloader: Boot Sequence ── -->
+    <div class="preloader" id="preloader" role="status" aria-live="polite">
+        <div class="preloader-particles" id="preloaderParticles"></div>
+
+        <!-- Branding -->
+        <div class="preloader-brand">
+            <div class="preloader-brand-main">
+                <span class="preloader-brand-name">Atharva</span><span class="preloader-brand-accent">Kumbhar</span>
+            </div>
+            <div class="preloader-brand-subtitle">
+                <span class="subtitle-line"></span>
+                <span>Full Stack Developer</span>
+                <span class="subtitle-line"></span>
+            </div>
+        </div>
+
+        <!-- Sleek Loading Bar -->
+        <div class="preloader-sleek-track">
+            <div class="preloader-sleek-fill" id="preloaderSleekFill"></div>
+        </div>
+
+        <!-- Cycling Tagline -->
+        <div class="preloader-tagline">
+            <span class="tagline-word" style="--w:0">Ideate.</span>
+            <span class="tagline-word" style="--w:1">Build.</span>
+            <span class="tagline-word" style="--w:2">Develop.</span>
+            <span class="tagline-word" style="--w:3">Innovate.</span>
+        </div>
+    </div>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="background-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <main class="hero" id="home">
+        <div class="floating-icon icon-top-left" aria-hidden="true">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="floating-icon icon-top-right" aria-hidden="true">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="floating-icon icon-bottom-left" aria-hidden="true">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+        <div class="floating-icon icon-bottom-right" aria-hidden="true">
+            <i class="fa-regular fa-lightbulb"></i>
+        </div>
+
+        <div class="content-wrapper">
+            <h2 class="sub-title">Hello, I'm</h2>
+            <br>
+            <h1 class="sr-only">Atharva Vinayak Kumbhar - Full Stack Developer Portfolio</h1>
+            <h2 class="main-title">
+                <span class="purple-text" id="typing-text">Full Stack Developer</span>
+            </h2>
+            <br>
+            <h5 class="year">Atharva Vinayak Kumbhar | Full Stack Developer</h5>
+            <p class="hero-desc">Full Stack Developer building scalable web applications, robust APIs, database systems, and AI-powered solutions.</p>
+            <div class="hero-buttons">
+                <a href="https://www.linkedin.com/in/atharva-kumbhar-749724264/" target="_blank" rel="noopener noreferrer" class="btn-resume">Let's Connect</a>
+                <a href="javascript:void(0)" id="openResumeBtn" class="btn-resume">View Resume</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="about-section" id="about">
+        <div class="glass-card scroll-reveal">
+            <h2>About Me - <span class="purple-text">Behind The Code!</span></h2>
+            <p>
+                Full Stack Developer with hands-on experience building end-to-end web applications using React.js, Node.js, Express.js, TypeScript, Python, SQL, and NoSQL databases. Strong foundation in Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, and REST API development.
+                <br><br>
+                Experienced in developing authenticated APIs, optimizing SQL queries, and integrating LLM-powered and Agentic AI workflows. Passionate about engineering clean, maintainable systems from responsive, high-fidelity user interfaces to high-performance database architectures.
+            </p>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="projects-section" id="education">
+        <h2 class="section-title">Education - <span class="purple-text">My Academic Journey!</span></h2>
+        <br>
+        <div class="timeline">
+            <div class="timeline-line">
+                <div class="timeline-progress"></div>
+            </div>
+
+            <!-- Milestone 1 -->
+            <div class="timeline-item left">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <div class="project-tag">University of Mumbai</div>
+                    <div class="edu-icon-badge">
+                        <i class="fa-solid fa-graduation-cap card-icon"></i>
+                    </div>
+                    <h3>B.E. Computer Engineering</h3>
+                    <h4 class="edu-school">Vishwaniketan's IMEET</h4>
+                    <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+                    <div class="coursework-section">
+                        <span class="coursework-title">Relevant Coursework:</span>
+                        <div class="coursework-badges">
+                            <span>Data Structures &amp; Algorithms</span>
+                            <span>DBMS</span>
+                            <span>Operating Systems</span>
+                            <span>OOP</span>
+                            <span>Full Stack Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-date">2022 – 2026</div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-item right">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <div class="project-tag">Higher Secondary (12th)</div>
+                    <div class="edu-icon-badge">
+                        <i class="fa-solid fa-school card-icon"></i>
+                    </div>
+                    <h3>12th | MSBSHSE</h3>
+                    <h4 class="edu-school">Mudhoji High School and Jr. College</h4>
+                    <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Phaltan, India</p>
+                </div>
+                <div class="timeline-date">2021 – 2022</div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-item left">
+                <div class="timeline-number">03</div>
+                <div class="timeline-content">
+                    <div class="project-tag">Secondary School (10th)</div>
+                    <div class="edu-icon-badge">
+                        <i class="fa-solid fa-book-open card-icon"></i>
+                    </div>
+                    <h3>10th | MSBSHSE</h3>
+                    <h4 class="edu-school">Shreemant Shivajiraje English Medium School</h4>
+                    <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Phaltan, India</p>
+                </div>
+                <div class="timeline-date">2019 – 2020</div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="projects-section" id="projects">
+        <h2 class="section-title">Projects Showcase - <span class="purple-text">What I've Built!</span></h2>
+        <br>
+        <div class="experience-grid">
+
+            <!-- PROJECT 1 (FEATURED) -->
+            <div class="experience-card featured-project">
+                <div class="experience-date">2026</div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">AI / Full Stack (Featured)</div>
+                <h3>AI Website Generator</h3>
+                <p>
+                    Built a full-stack AI platform that converts natural-language requirements into deployable websites.
+                </p>
+                <ul class="project-highlights">
+                    <li>Designed an agentic workflow to coordinate AI-driven website generation tasks and tool invocation.</li>
+                    <li>Integrated Model Context Protocol (MCP) for structured interaction between AI agents and external tools.</li>
+                    <li>Implemented browser-based code execution and live preview using WebContainers.</li>
+                    <li>Integrated Docker and Apache Kafka for containerized and event-driven application workflows.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Python</span>
+                    <span>LLMs</span>
+                    <span>Agentic AI</span>
+                    <span>MCP</span>
+                    <span>Docker</span>
+                    <span>Apache Kafka</span>
+                    <span>ClickHouse</span>
+                    <span>WebContainers</span>
+                </div>
+                <div class="project-links-wrapper">
+                    <a href="https://github.com/Atharvakumbhar1007/Website-Genarator" target="_blank" rel="noopener noreferrer"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="experience-card">
+                <div class="experience-date">2026</div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">Backend / API</div>
+                <h3>Bookstore API</h3>
+                <p>
+                    Developed a RESTful API using Node.js, Express.js, TypeScript, Prisma, and SQLite for bookstore management.
+                </p>
+                <ul class="project-highlights">
+                    <li>Implemented JWT-based authentication and role-based access control (RBAC).</li>
+                    <li>Implemented full CRUD operations and protected API routes.</li>
+                    <li>Applied layered architecture, request validation via Zod, and centralized error handling.</li>
+                    <li>Utilized ORM-based database access with Prisma for reliable data management.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>TypeScript</span>
+                    <span>Prisma</span>
+                    <span>SQLite</span>
+                    <span>JWT</span>
+                    <span>Zod</span>
+                </div>
+                <div class="project-links-wrapper">
+                    <a href="https://github.com/Atharvakumbhar1007/bookstore-api" target="_blank" rel="noopener noreferrer"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="experience-card">
+                <div class="experience-date">2025</div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">Database Engineering</div>
+                <h3>E-Commerce Database Management System</h3>
+                <p>
+                    Designed a 19-table BCNF e-commerce database for catalog, orders, inventory, payments, and coupons.
+                </p>
+                <ul class="project-highlights">
+                    <li>Implemented stored procedures and triggers for ACID-safe order, payment, and inventory workflows.</li>
+                    <li>Built reporting views and analytical queries using CTEs and window functions for key business KPIs.</li>
+                    <li>Improved performance with B-Tree and composite indexes alongside EXPLAIN-based query tuning.</li>
+                    <li>Implemented Role-Based Access Control (RBAC) configured across 3 user roles.</li>
+                </ul>
+                <div class="project-tech-stack">
+                    <span>MySQL 8.0</span>
+                    <span>Stored Procedures</span>
+                    <span>Triggers</span>
+                    <span>Views</span>
+                    <span>RBAC</span>
+                    <span>Window Functions</span>
+                    <span>Query Optimization</span>
+                </div>
+                <div class="project-links-wrapper">
+                    <a href="https://github.com/Atharvakumbhar1007/Advanced-Ecommerce-Database-System-" target="_blank" rel="noopener noreferrer"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <section class="skills-section" id="skills">
+        <h2 class="section-title">Technical Skills - <span class="purple-text">Core Expertise!</span></h2>
+
+        <div class="skill-filters" id="skillFilters">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="languages">Languages</button>
+            <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
+            <button type="button" class="filter-btn" data-filter="backend">Backend</button>
+            <button type="button" class="filter-btn" data-filter="databases">Databases</button>
+            <button type="button" class="filter-btn" data-filter="tools">Tools</button>
+            <button type="button" class="filter-btn" data-filter="ai-agentic">AI &amp; Agentic AI</button>
+            <button type="button" class="filter-btn" data-filter="cs-fundamentals">CS Fundamentals</button>
+        </div>
+
+        <div class="skill-grid" id="skillGrid">
+
+            <!-- LANGUAGES -->
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-java-plain colored"></i>
+                <span>Core Java</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript (ES6+)</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="fa-solid fa-table" style="color: #a855f7;"></i>
+                <span>SQL</span>
+            </div>
+
+            <!-- FRONTEND -->
+            <div class="skill-card" data-category="frontend">
+                <i class="devicon-react-original colored"></i>
+                <span>React.js</span>
+            </div>
+            <div class="skill-card" data-category="frontend">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="skill-card" data-category="frontend">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="skill-card" data-category="frontend">
+                <i class="devicon-bootstrap-plain colored"></i>
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-card" data-category="frontend">
+                <i class="fa-solid fa-mobile-screen-button" style="color: #38bdf8;"></i>
+                <span>Responsive Design</span>
+            </div>
+
+            <!-- BACKEND -->
+            <div class="skill-card" data-category="backend">
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="devicon-express-original"></i>
+                <span>Express.js</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="fa-solid fa-network-wired" style="color: #a855f7;"></i>
+                <span>REST APIs</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="fa-solid fa-key" style="color: #f59e0b;"></i>
+                <span>JWT Authentication</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="devicon-prisma-original colored"></i>
+                <span>Prisma</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="fa-solid fa-diagram-project" style="color: #10b981;"></i>
+                <span>ORM</span>
+            </div>
+            <div class="skill-card" data-category="backend">
+                <i class="fa-solid fa-shield-halved" style="color: #3b82f6;"></i>
+                <span>Zod</span>
+            </div>
+
+            <!-- DATABASES -->
+            <div class="skill-card" data-category="databases">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="devicon-mongodb-plain colored"></i>
+                <span>MongoDB</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="fa-solid fa-database" style="color: #38bdf8;"></i>
+                <span>RDBMS</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="fa-solid fa-bolt" style="color: #eab308;"></i>
+                <span>Query Optimization</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="fa-solid fa-sitemap" style="color: #ec4899;"></i>
+                <span>ER Modeling</span>
+            </div>
+
+            <!-- TOOLS -->
+            <div class="skill-card" data-category="tools">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-card" data-category="tools">
+                <i class="devicon-github-original"></i>
+                <span>GitHub</span>
+            </div>
+            <div class="skill-card" data-category="tools">
+                <i class="devicon-vscode-plain colored"></i>
+                <span>VS Code</span>
+            </div>
+            <div class="skill-card" data-category="tools">
+                <i class="devicon-postman-plain colored"></i>
+                <span>Postman</span>
+            </div>
+            <div class="skill-card" data-category="tools">
+                <i class="fa-solid fa-paper-plane" style="color: #f97316;"></i>
+                <span>Bruno</span>
+            </div>
+            <div class="skill-card" data-category="tools">
+                <i class="devicon-docker-plain colored"></i>
+                <span>Docker</span>
+            </div>
+
+            <!-- AI & AGENTIC AI -->
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: #c084fc;"></i>
+                <span>Generative AI</span>
+            </div>
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-brain" style="color: #a855f7;"></i>
+                <span>LLMs</span>
+            </div>
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-robot" style="color: #818cf8;"></i>
+                <span>Agentic AI</span>
+            </div>
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-microchip" style="color: #60a5fa;"></i>
+                <span>AI Agents</span>
+            </div>
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-terminal" style="color: #34d399;"></i>
+                <span>Prompt Engineering</span>
+            </div>
+            <div class="skill-card skill-highlight" data-category="ai-agentic">
+                <i class="fa-solid fa-plug" style="color: #fbbf24;"></i>
+                <span>MCP</span>
+            </div>
+
+            <!-- CS FUNDAMENTALS -->
+            <div class="skill-card" data-category="cs-fundamentals">
+                <i class="fa-solid fa-code-branch" style="color: #f43f5e;"></i>
+                <span>Data Structures &amp; Algorithms</span>
+            </div>
+            <div class="skill-card" data-category="cs-fundamentals">
+                <i class="fa-solid fa-cubes" style="color: #a855f7;"></i>
+                <span>OOP</span>
+            </div>
+            <div class="skill-card" data-category="cs-fundamentals">
+                <i class="fa-solid fa-server" style="color: #06b6d4;"></i>
+                <span>DBMS</span>
+            </div>
+            <div class="skill-card" data-category="cs-fundamentals">
+                <i class="fa-solid fa-desktop" style="color: #8b5cf6;"></i>
+                <span>Operating Systems</span>
+            </div>
+            <div class="skill-card" data-category="cs-fundamentals">
+                <i class="fa-solid fa-wifi" style="color: #10b981;"></i>
+                <span>Computer Networks</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="certifications-section" id="certifications">
+        <h2 class="section-title">Certifications - <span class="purple-text">Learning &amp; Growth!</span></h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-item cert-text-card">
+                <div class="cert-header-badge">
+                    <div class="cert-icon-wrap">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="cert-category-tag">Udemy</span>
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header-meta">
+                        <span class="cert-issuer"><i class="fa-solid fa-award"></i> Udemy</span>
+                        <span class="cert-date"><i class="fa-regular fa-calendar"></i> Aug 2026</span>
+                    </div>
+                    <h3>Full Stack Generative &amp; Agentic AI with Python</h3>
+                    <p>In-depth certification covering modern generative AI architectures, agentic workflows, Model Context Protocol (MCP), and full-stack Python LLM integration.</p>
+                    <div class="cert-action-footer">
+                        <a href="https://ude.my/UC-2e2e5b6c-bcc5-440c-88cc-bced261fff0b" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                            <span>Verify Credential</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IoT Certificate Card (Featured with Image & Lightbox) -->
+            <div class="cert-item">
+                <div class="cert-img-wrapper">
+                    <img src="portfolio_assets/IOT.jpeg" alt="IoT Monitoring and Optimization Challenges Certificate - Atharva Kumbhar" loading="lazy">
+                    <div class="cert-overlay">
+                        <button type="button" class="cert-overlay-link" id="openIotCertBtn" aria-label="View IoT Certificate">
+                            <span>View Certificate</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header-meta">
+                        <span class="cert-issuer"><i class="fa-solid fa-building-columns"></i> Vishwaniketan</span>
+                        <span class="cert-date"><i class="fa-regular fa-calendar"></i> April 7–11, 2025</span>
+                    </div>
+                    <h3>IoT: Monitoring &amp; Optimization Challenges</h3>
+                    <p>Certificate of Completion for participating in the Faculty Development Program on IoT Monitoring &amp; Optimization Challenges conducted at Vishwaniketan campus.</p>
+                </div>
+            </div>
+
+            <div class="cert-item cert-text-card">
+                <div class="cert-header-badge">
+                    <div class="cert-icon-wrap">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <span class="cert-category-tag">Udemy</span>
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header-meta">
+                        <span class="cert-issuer"><i class="fa-solid fa-award"></i> Udemy</span>
+                        <span class="cert-date"><i class="fa-regular fa-calendar"></i> Aug 2026</span>
+                    </div>
+                    <h3>Learn JAVA Programming – Beginner to Master</h3>
+                    <p>Comprehensive mastery of Core Java, Object-Oriented Programming (OOP) paradigms, collections, multithreading, and software design principles.</p>
+                    <div class="cert-action-footer">
+                        <a href="https://ude.my/UC-8382ae56-a92a-4c32-9420-b7610f502801" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                            <span>Verify Credential</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <section class="profiles-section" id="profiles">
+        <h2 class="section-title">Web Presence - <span class="purple-text">Find Me Online!</span></h2>
+        <div class="profile-header">
+            <div class="profile-img-main">
+                <img src="portfolio_assets/Atharva-Professional-Photo.jpg" alt="Atharva Vinayak Kumbhar - Full Stack Developer" loading="lazy">
+            </div>
+            <div class="profile-text">
+                <p class="purple-text">@Atharvakumbhar1007</p>
+            </div>
+        </div>
+
+        <div class="profiles-grid">
+
+            <a href="https://www.linkedin.com/in/atharva-kumbhar-749724264/" target="_blank" rel="noopener noreferrer" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-linkedin" style="color: #0077b5;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>LinkedIn</h3>
+                    <p>Connect</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/Atharvakumbhar1007" target="_blank" rel="noopener noreferrer" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-github" style="color: #fff;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>GitHub</h3>
+                    <p>Repositories</p>
+                </div>
+            </a>
+
+            <a href="https://www.hackerrank.com/profile/atharvakumbhar62" target="_blank" rel="noopener noreferrer" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-hackerrank" style="color: #2ec866;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>HackerRank</h3>
+                    <p>Problem Solving</p>
+                </div>
+            </a>
+        </div>
+        <br>
+        <p class="profile-note">Click any profile above to explore my code, professional network, and coding activities.</p>
+    </section>
+
+    <br>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch - <span class="purple-text">Let's Build Something!</span></h2>
+            <h4 class="contact-note">Have a project idea, collaboration opportunity, or developer role in mind?<br>Feel free to reach out.</h4>
+
+            <div class="contact-direct-info">
+                <a href="mailto:atharvakumbhar631@gmail.com" class="contact-badge">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>atharvakumbhar631@gmail.com</span>
+                </a>
+                <a href="tel:+919322913729" class="contact-badge">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 9322913729</span>
+                </a>
+                <div class="contact-badge">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Pune, Maharashtra, India</span>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="100" placeholder=" " autocomplete="name">
+                        <label for="name">Name</label>
+                        <i class="fa-solid fa-user input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                        <label for="email">Email</label>
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required minlength="10" maxlength="5000" placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                        <i class="fa-solid fa-comment input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn-resume btn-submit">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2 class="footer-logo">Atharva<span class="purple-text">Kumbhar</span></h2>
+                <p class="footer-tagline">Building Scalable Web Applications, Robust APIs &amp; AI Workflows.</p>
+            </div>
+
+            <ul class="footer-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/atharva-kumbhar-749724264/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Atharvakumbhar1007" target="_blank" rel="noopener noreferrer" class="social-link github" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.hackerrank.com/profile/atharvakumbhar62" target="_blank" rel="noopener noreferrer" class="social-link hackerrank" aria-label="HackerRank"><i
+                        class="fa-brands fa-hackerrank"></i></a>
+                <a href="mailto:atharvakumbhar631@gmail.com" class="social-link email" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atharva Vinayak Kumbhar. All rights reserved.</p>
+            <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- ── Resume Modal ── -->
+    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="resume-modal-content glass-card">
+            <div class="resume-modal-header">
+                <h2 id="resumeModalTitle">Atharva Vinayak Kumbhar - <span class="purple-text">Resume</span></h2>
+                <div class="resume-actions">
+                    <a href="portfolio_assets/Atharva_Vinayak_Kumbhar_Resume.pdf" download="Atharva_Vinayak_Kumbhar_Resume.pdf" class="btn-resume btn-download">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                    <button class="close-modal" id="closeResumeBtn" aria-label="Close Resume Modal">&times;</button>
+                </div>
+            </div>
+            <div class="resume-iframe-container">
+                <iframe src="portfolio_assets/Atharva_Vinayak_Kumbhar_Resume.pdf" title="Atharva Vinayak Kumbhar Resume" width="100%" height="100%"
+                    style="border: none;"></iframe>
+            </div>
+            <p class="resume-fallback">
+                Unable to view the PDF directly? <a href="portfolio_assets/Atharva_Vinayak_Kumbhar_Resume.pdf" download="Atharva_Vinayak_Kumbhar_Resume.pdf">Download Resume PDF</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ── Certificate Modal / Lightbox ── -->
+    <div id="certModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+        <div class="resume-modal-content glass-card cert-modal-content">
+            <div class="resume-modal-header">
+                <h2 id="certModalTitle">IoT: Monitoring &amp; Optimization Challenges - <span class="purple-text">Vishwaniketan</span></h2>
+                <div class="resume-actions">
+                    <a href="portfolio_assets/IOT.jpeg" download="Atharva_Kumbhar_IoT_Certificate.jpeg" class="btn-resume btn-download">
+                        <i class="fa-solid fa-download"></i> Download Image
+                    </a>
+                    <button class="close-modal" id="closeCertBtn" aria-label="Close Certificate Modal">&times;</button>
+                </div>
+            </div>
+            <div class="cert-modal-img-container">
+                <img src="portfolio_assets/IOT.jpeg" alt="IoT Monitoring and Optimization Challenges Certificate - Atharva Kumbhar" class="cert-modal-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="3d_background.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
