@@ -15,16 +15,6 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const resendApiKey = process.env.RESEND_API_KEY;
-  const receiverEmail = process.env.RECEIVER_EMAIL || 'atharvakumbhar631@gmail.com';
-
-  if (!resendApiKey) {
-    console.error('Server Configuration Error: Missing RESEND_API_KEY environment variable');
-    return res.status(500).json({
-      message: 'Server Configuration Error: Contact form service is currently not configured.'
-    });
-  }
-
   try {
     const { name, email, message } = req.body || {};
 
@@ -40,6 +30,16 @@ module.exports = async function handler(req, res) {
 
     if (!message || typeof message !== 'string' || message.trim().length < 10 || message.trim().length > 5000) {
       return res.status(400).json({ message: 'Message must be between 10 and 5000 characters.' });
+    }
+
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const receiverEmail = process.env.RECEIVER_EMAIL || 'atharvakumbhar631@gmail.com';
+
+    if (!resendApiKey) {
+      console.error('Server Configuration Error: Missing RESEND_API_KEY environment variable');
+      return res.status(500).json({
+        message: 'Something went wrong. Please try again or email me directly.'
+      });
     }
 
     const safeName = escapeHtml(name.trim());
@@ -94,16 +94,17 @@ module.exports = async function handler(req, res) {
     });
 
     if (data.status === 200 || data.status === 201) {
-      return res.status(200).json({ success: true, message: 'Message delivered successfully!' });
+      return res.status(200).json({ success: true, message: 'Message sent successfully!' });
     } else {
-      return res.status(data.status || 500).json({
-        message: 'Email service returned an error. Please try again or reach out directly.'
+      console.error('Resend API returned non-200 status:', data.status, data.data);
+      return res.status(data.status && data.status >= 400 && data.status < 500 ? data.status : 500).json({
+        message: 'Something went wrong. Please try again or email me directly.'
       });
     }
   } catch (error) {
     console.error('Error submitting form via Resend:', error.message);
     return res.status(500).json({
-      message: 'Internal Server Error. Please contact atharvakumbhar631@gmail.com directly.'
+      message: 'Something went wrong. Please try again or email me directly.'
     });
   }
 };

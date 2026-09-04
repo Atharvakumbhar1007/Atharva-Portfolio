@@ -25,3 +25,6 @@ Thumbs.db
 
 # Temporary / Scratch
 scratch/
+.vercel
+.env*
+!.env.example

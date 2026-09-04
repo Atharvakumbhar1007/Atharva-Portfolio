@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.style.background = 'linear-gradient(90deg, #22c55e, #16a34a, #22c55e)';
                         btn.style.borderColor = '#4ade80';
                         if (formFeedback) {
-                            formFeedback.textContent = 'Message sent successfully! Thank you for reaching out.';
+                            formFeedback.textContent = 'Message sent successfully!';
                             formFeedback.className = 'form-feedback success';
                         }
                         contactForm.reset();
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.innerHTML = '<span>Error, Please Retry!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
                         btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
                         if (formFeedback) {
-                            formFeedback.innerHTML = (resData.message || 'Something went wrong.') + ' Please reach out directly at <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">atharvakumbhar631@gmail.com</a>.';
+                            formFeedback.innerHTML = 'Something went wrong. Please try again or <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">email me directly</a>.';
                             formFeedback.className = 'form-feedback error';
                         }
                         if (window.soundSystem) window.soundSystem.playError();
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.innerHTML = '<span>Error!</span> <i class="fa-solid fa-triangle-exclamation"></i>';
                     btn.style.background = 'linear-gradient(90deg, #ef4444, #dc2626, #ef4444)';
                     if (formFeedback) {
-                        formFeedback.innerHTML = 'Network / static hosting error. Please email <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">atharvakumbhar631@gmail.com</a> directly.';
+                        formFeedback.innerHTML = 'Something went wrong. Please try again or <a href="mailto:atharvakumbhar631@gmail.com" style="color:#c084fc;text-decoration:underline;">email me directly</a>.';
                         formFeedback.className = 'form-feedback error';
                     }
                     if (window.soundSystem) window.soundSystem.playError();
