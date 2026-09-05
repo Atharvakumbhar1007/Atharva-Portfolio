@@ -376,12 +376,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Certificate Lightbox Modal ──
     const certModal = document.getElementById('certModal');
-    const openIotCertBtn = document.getElementById('openIotCertBtn');
     const closeCertBtn = document.getElementById('closeCertBtn');
+    const certModalTitle = document.getElementById('certModalTitle');
+    const certModalImg = document.getElementById('certModalImg');
+    const certModalDownload = document.getElementById('certModalDownload');
+    const certModalTriggers = document.querySelectorAll('.cert-modal-trigger, #openIotCertBtn, #openTechExpoCertBtn');
+    let lastActiveCertBtn = null;
 
     if (certModal && closeCertBtn) {
-        const openCertModal = (e) => {
-            if (e) e.preventDefault();
+        const openCertModal = (triggerBtn) => {
+            lastActiveCertBtn = triggerBtn;
+
+            if (triggerBtn) {
+                const title = triggerBtn.getAttribute('data-cert-title');
+                const img = triggerBtn.getAttribute('data-cert-img');
+                const alt = triggerBtn.getAttribute('data-cert-alt');
+                const download = triggerBtn.getAttribute('data-cert-download');
+                const downloadName = triggerBtn.getAttribute('data-cert-download-name');
+
+                if (certModalTitle && title) certModalTitle.innerHTML = title;
+                if (certModalImg && img) {
+                    certModalImg.src = img;
+                    certModalImg.alt = alt || 'Certificate - Atharva Kumbhar';
+                }
+                if (certModalDownload && download) {
+                    certModalDownload.href = download;
+                    if (downloadName) {
+                        certModalDownload.setAttribute('download', downloadName);
+                    }
+                }
+            }
+
             certModal.classList.add('show');
             document.body.style.overflow = 'hidden';
             closeCertBtn.focus();
@@ -390,10 +415,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeCertModal = () => {
             certModal.classList.remove('show');
             document.body.style.overflow = 'auto';
-            if (openIotCertBtn) openIotCertBtn.focus();
+            if (lastActiveCertBtn) {
+                lastActiveCertBtn.focus();
+            }
         };
 
-        if (openIotCertBtn) openIotCertBtn.addEventListener('click', openCertModal);
+        certModalTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openCertModal(btn);
+            });
+        });
+
         closeCertBtn.addEventListener('click', closeCertModal);
 
         certModal.addEventListener('click', (e) => {

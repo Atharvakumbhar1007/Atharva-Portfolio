@@ -19,7 +19,7 @@ Atharva Vinayak Kumbhar is a Full Stack Developer focused on building modern web
 - **Projects Showcase**: Highlights key projects (*AI Website Generator*, *Bookstore API*, and *E-Commerce Database Management System*) with tech tags and direct GitHub links.
 - **Technical Skills Matrix**: Interactive category filtering across Languages, Frontend, Backend, Databases, Tools, AI & Agentic AI, and CS Fundamentals.
 - **Education Journey**: Interactive academic timeline covering B.E. in Computer Engineering at Vishwaniketan's IMEET, 12th (HSC), and 10th (SSC).
-- **Certifications Showcase**: Verified credentials including a certificate lightbox modal for *IoT: Monitoring & Optimization Challenges* (Vishwaniketan) and Udemy credential verification.
+- **Certifications Showcase**: Verified credentials and project competition achievements including certificate lightbox modals for *Tech-Expo 3.0: Project Competition* (PHCET Rasayani), *IoT: Monitoring & Optimization Challenges* (Vishwaniketan), and Udemy credential verification.
 - **Developer Profiles**: Direct access to GitHub, LinkedIn, and HackerRank networks.
 - **Interactive Resume Modal**: Embedded in-browser PDF viewer with direct download button, Escape key, and backdrop click dismiss handlers.
 - **Contact Form**: Serverless dispatch endpoint via Resend with client and server-side input sanitization.
