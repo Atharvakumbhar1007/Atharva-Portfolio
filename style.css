@@ -3031,6 +3031,110 @@ button.cert-overlay-link {
     backdrop-filter: blur(5px);
 }
 
+/* ── Modern Certificate Meta Badges & Action Buttons ── */
+.cert-meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.cert-meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    color: #e9d5ff;
+}
+
+.cert-meta-badge.duration-badge {
+    background: rgba(56, 189, 248, 0.12);
+    border-color: rgba(56, 189, 248, 0.35);
+    color: #7dd3fc;
+}
+
+.cert-meta-badge.grade-badge {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.35);
+    color: #86efac;
+}
+
+.cert-action-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cert-btn-primary,
+.cert-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cert-btn-primary {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(126, 34, 206, 0.4));
+    border: 1px solid rgba(168, 85, 247, 0.6);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+.cert-btn-primary:hover {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.45), rgba(126, 34, 206, 0.65));
+    border-color: #c084fc;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.cert-btn-secondary {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #e2e8f0;
+}
+
+.cert-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(168, 85, 247, 0.5);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+@media (max-width: 480px) {
+    .cert-action-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cert-btn-primary,
+    .cert-btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after {
